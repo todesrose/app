@@ -11,8 +11,8 @@ class Calc extends React.Component{
         };
        
     }
-    clickcatch(){
-        if (this.name === "plus") this.setState({number: this.state.number+1});
+    clickcatch(params){
+        if (this.params.name === "plus") this.setState({number: this.state.number+1});
         else this.setState({number: this.state.number-1});
 
     }
