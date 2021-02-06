@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './App'
+import Button from './button'
 
 class Calc extends React.Component{
    
@@ -18,8 +18,8 @@ class Calc extends React.Component{
     }
     render(){
         return(<><div className="result">{this.state.number}</div>
-        <button name="plus"  onClick={this.clickcatch.bind(this)} label="Plus"/>
-        <button name="minus"  onClick={this.clickcatch.bind(this)} label="Minus"/></>) ;
+        <Button name="plus"  onClick={this.clickcatch.bind(this)} label="Plus"/>
+        <Button name="minus"  onClick={this.clickcatch.bind(this)} label="Minus"/></>) ;
     }
 
 }
