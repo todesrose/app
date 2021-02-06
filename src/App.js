@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Calc from './calc.js';
+import Calc from './Calc.js';
 import './App.css';
 
 
