@@ -1,11 +1,5 @@
 import React from 'react'
-import { withTranslation } from 'react-i18next';
-/**
- * Button.
- * @param {Object} params - table key, reducer name, mount name (could be only single per model)
- * @param {Object} template - creator of initial payload ({app:web, version:2.0 etc})
- * @param {Object} connector - connector object providing transport and endpoint (in case for http_connector)
- */
+
 
 class Button extends React.Component{
     onClick(event) {
@@ -17,13 +11,12 @@ class Button extends React.Component{
     render () {
         let button_className = "button btn btn-primary " + (this.props.className || '');
         let type = this.props.type || 'button';
-        const { t } = this.props;
         let self = this;
         switch(this.props.status) {
             case 'disabled':
                 return (
                     <button id={this.props.name} className={button_className} name={this.props.name} disabled
-                            type={type} onClick={this.onClick.bind(this)}>{this.props.children}{t(this.props.label)}
+                            type={type} onClick={this.onClick.bind(this)}>{this.props.children}{this.props.label}
                     </button>
                 );
             case 'hidden':
@@ -33,7 +26,7 @@ class Button extends React.Component{
             default:
                 return (
                     <button id={this.props.name} className={button_className} name={this.props.name}
-                            type={type} onClick={this.onClick.bind(this)}>{this.props.children}{t(this.props.label)}
+                            type={type} onClick={this.onClick.bind(this)}>{this.props.children}{this.props.label}
                     </button>
                 );
         }
@@ -41,4 +34,4 @@ class Button extends React.Component{
     }
 }
 
-export default withTranslation()(Button);
+export default Button;
