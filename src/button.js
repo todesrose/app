@@ -12,6 +12,7 @@ class Button extends React.Component{
         let button_className = "button btn btn-primary " + (this.props.className || '');
         let type = this.props.type || 'button';
         let self = this;
+        
         switch(this.props.status) {
             case 'disabled':
                 return (
